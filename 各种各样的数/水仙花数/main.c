@@ -3,19 +3,14 @@
 
 int main()
 {
-    int i,j,k,a,b;
-    for(i=1;i<10;i++)
+    int i,a,b,c;
+    for(i=999;i>100;i--)
     {
-        for(j=0;j<10;j++)
-        {
-            for(k=0;k<10;k++)
-            {
-                a=i*i*i+j*j*j+k*k*k;
-                b=i*100+j*10+k;
-                if(a==b)
-                    printf("%d是一个水仙花数\n",a);
-            }
-        }
+        a=i/100;
+        c=i%10;
+        b=i/10%10;
+        if(a*a*a+b*b*b+c*c*c==i)
+            printf("%d是一个水仙花数\n",i);
     }
     return 0;
 }
